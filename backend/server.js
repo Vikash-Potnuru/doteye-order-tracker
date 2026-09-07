@@ -4,6 +4,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 
 const connectDB = require('./config/db')
+const {corsOptions} = require('./config/cors')
 const {initializeSocket} = require('./socket/socket')
 const errorMiddleware = require('./middleware/errorMiddleware')
 
@@ -18,16 +19,7 @@ dotenv.config()
 const app = express()
 const server = http.createServer(app)
 
-const allowedOrigins = process.env.CLIENT_URL
-  ? process.env.CLIENT_URL.split(',')
-  : ['http://localhost:5173']
-
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  })
-)
+app.use(cors(corsOptions))
 
 app.use(express.json())
 

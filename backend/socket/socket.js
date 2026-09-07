@@ -2,19 +2,13 @@ const {Server} = require('socket.io')
 const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 const Order = require('../models/Order')
+const {socketCorsOptions} = require('../config/cors')
 
 let io
 
 const initializeSocket = server => {
-  const allowedOrigins = process.env.CLIENT_URL
-    ? process.env.CLIENT_URL.split(',')
-    : ['http://localhost:5173']
-
   io = new Server(server, {
-    cors: {
-      origin: allowedOrigins,
-      credentials: true,
-    },
+    cors: socketCorsOptions,
   })
 
   io.use(async (socket, next) => {
