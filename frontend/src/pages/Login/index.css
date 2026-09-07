@@ -121,6 +121,11 @@
 .loginBox form {display:flex; flex-direction:column; gap:12px; text-align:left}
 .loginBox input {width:100%; box-sizing:border-box; padding:13px 14px; border:1px solid #cbd5e1; border-radius:10px; font:inherit; outline:none}
 .loginBox input:focus {border-color:#2563eb; box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+.passwordField {position:relative}
+.passwordField input {padding-right:48px}
+.passwordToggle {position:absolute; top:50%; right:5px; width:38px !important; height:38px; justify-content:center; transform:translateY(-50%) !important; margin:0 !important; padding:0 !important; border:0 !important; background:transparent !important; box-shadow:none !important; color:#64748b !important; animation:none !important}
+.passwordToggle:hover {background:#eff6ff !important; color:#2563eb !important; transform:translateY(-50%) !important; box-shadow:none !important}
+.passwordToggle:focus-visible {outline:2px solid #2563eb; outline-offset:1px}
 .loginBox .loginSubmit {justify-content:center; text-align:center; margin-top:2px; background:#2563eb; color:white; border-color:#2563eb}
 .loginBox .loginSubmit:hover {background:#1d4ed8; color:white}
 .loginBox .modeButton {display:block; text-align:center; border:0; padding:8px; margin-top:12px; color:#2563eb; background:transparent; box-shadow:none; transform:none; animation:none}

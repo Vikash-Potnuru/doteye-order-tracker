@@ -1,6 +1,6 @@
 import {Redirect, useHistory} from 'react-router-dom'
 import {useState} from 'react'
-import {LogIn, UserPlus, ShoppingBag} from 'lucide-react'
+import {Eye, EyeOff, LogIn, UserPlus} from 'lucide-react'
 import {loginUser, registerUser} from '../../services/authService'
 import './index.css'
 
@@ -10,6 +10,7 @@ const Login = ({currentUser, login}) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -43,7 +44,24 @@ const Login = ({currentUser, login}) => {
         <form onSubmit={submit}>
           {mode === 'register' && <input required value={name} onChange={e => setName(e.target.value)} placeholder="Full name" />}
           <input required type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email address" />
-          <input required type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
+          <div className="passwordField">
+            <input
+              required
+              type={showPassword ? 'text' : 'password'}
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+            <button
+              type="button"
+              className="passwordToggle"
+              onClick={() => setShowPassword(current => !current)}
+              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              title={showPassword ? 'Hide password' : 'Show password'}
+            >
+              {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+            </button>
+          </div>
           {error && <div className="loginError">{error}</div>}
           <button className="loginSubmit" disabled={loading} type="submit">
             {mode === 'login' ? <LogIn size={18}/> : <UserPlus size={18}/>} {loading ? 'Please wait...' : mode === 'login' ? 'Sign in' : 'Create account'}
