@@ -1,0 +1,55 @@
+.orderTimeline {
+  display: flex;
+  flex-direction: column;
+}
+.timelineItem {
+  display: flex;
+  gap: 12px;
+  position: relative;
+  padding-bottom: 24px;
+}
+.timelineItem:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 23px;
+  width: 2px;
+  height: calc(100% - 10px);
+  background: #dbeafe;
+}
+.timelineIcon {
+  z-index: 1;
+  color: #2563eb;
+  background: #fff;
+}
+.timelineContent {
+  width: 100%;
+}
+.timelineTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.timelineTop h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #0f172a;
+}
+.timelineTop span {
+  color: #64748b;
+  font-size: 12px;
+}
+.timelineContent p {
+  margin: 6px 0;
+  color: #475569;
+  font-size: 13px;
+}
+.timelineContent small {
+  color: #64748b;
+}
+@media (max-width: 600px) {
+  .timelineTop {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

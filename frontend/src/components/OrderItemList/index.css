@@ -1,0 +1,27 @@
+.orderItemList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+.orderItem h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  color: #0f172a;
+}
+.orderItem p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+.orderItem > p {
+  font-weight: 700;
+  color: #0f172a;
+}

@@ -1,0 +1,76 @@
+.orderCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  will-change: transform;
+}
+.orderCard:hover {
+  transform: translateY(-4px);
+  border-color: #bfdbfe;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.09);
+}
+.orderCardTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.orderId {
+  margin: 0;
+  font-weight: 800;
+  color: #17233d;
+}
+.orderDate {
+  margin: 5px 0 0;
+  color: #73839b;
+  font-size: 12px;
+}
+.orderCardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0;
+}
+.orderCardInfo p {
+  margin: 0;
+  color: #52627a;
+}
+.orderCardInfo h3 {
+  margin: 0;
+  color: #17233d;
+}
+.orderCardActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.outlineButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #36516e;
+  padding: 8px 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease,
+    transform 180ms ease, box-shadow 180ms ease;
+}
+.outlineButton:hover {
+  background: #f8fafc;
+  border-color: #93c5fd;
+  color: #1769aa;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.1);
+}
+.outlineButton:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.dangerButton {
+  color: #be3154;
+}

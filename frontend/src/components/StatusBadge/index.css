@@ -1,0 +1,52 @@
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  background: #eef2f7;
+  color: #334155;
+}
+
+.status-placed {
+  background: #eef2ff;
+  color: #4338ca;
+}
+.status-processing {
+  background: #fff7ed;
+  color: #c2410c;
+}
+.status-shipped {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+.status-delivered {
+  background: #ecfdf5;
+  color: #047857;
+}
+.status-disputed {
+  background: #fff1f2;
+  color: #be123c;
+}
+.status-cancelled {
+  background: #f1f5f9;
+  color: #64748b;
+}
+.status-open {
+  background: #fff7ed;
+  color: #c2410c;
+}
+.status-under-review {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+.status-resolved-refunded {
+  background: #ecfdf5;
+  color: #047857;
+}
+.status-resolved-rejected {
+  background: #f1f5f9;
+  color: #64748b;
+}

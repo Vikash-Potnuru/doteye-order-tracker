@@ -1,0 +1,102 @@
+.backLink {
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #334155;
+  text-decoration: none;
+  font-size: 13px;
+}
+.resolutionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.resolutionPanel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.resolutionPanel h2 {
+  margin: 0 0 18px;
+  font-size: 17px;
+}
+.resolutionPanel h3 {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.resolutionPanel > p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 9px 0;
+  margin: 0;
+}
+.resolutionPanel > p span {
+  color: #64748b;
+  font-size: 13px;
+}
+.resolutionPanel > p strong {
+  font-size: 13px;
+  text-align: right;
+}
+.customerExplanation {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  line-height: 1.6;
+}
+.resolutionPanel textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 10px;
+  resize: vertical;
+  outline: 0;
+}
+.resolutionButtons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.resolutionButtons button {
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+.resolutionButtons .rejectButton {
+  background: #be123c;
+}
+.lockNote {
+  margin-top: 14px !important;
+  display: block !important;
+  border: 0 !important;
+  background: #fff7ed;
+  color: #9a3412;
+  padding: 10px !important;
+  border-radius: 8px;
+}
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.panelHeader a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 13px;
+}
+@media (max-width: 850px) {
+  .resolutionGrid {
+    grid-template-columns: 1fr;
+  }
+}

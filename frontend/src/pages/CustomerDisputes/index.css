@@ -1,0 +1,27 @@
+.disputeTableWrapper {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+.disputeTableWrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+.disputeTableWrapper th,
+.disputeTableWrapper td {
+  padding: 13px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+}
+.disputeTableWrapper th {
+  background: #f8fafc;
+  color: #475569;
+}
+.disputeTableWrapper a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}

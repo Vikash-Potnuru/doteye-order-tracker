@@ -1,0 +1,96 @@
+.adminFilters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.adminFilters select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+}
+.orderTableWrapper {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+.orderTableWrapper table {
+  width: 100%;
+  min-width: 1050px;
+  border-collapse: collapse;
+}
+.orderTableWrapper th,
+.orderTableWrapper td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+}
+.orderTableWrapper th {
+  background: #f8fafc;
+  color: #475569;
+}
+.tableActions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.tableActions a,
+.tableActions button {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+  text-decoration: none;
+}
+.confirmationOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.42);
+}
+.confirmationModal {
+  width: min(100%, 420px);
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);
+}
+.confirmationModal h2 {
+  margin: 0;
+  color: #172554;
+  font-size: 20px;
+}
+.confirmationModal p {
+  margin: 12px 0 24px;
+  color: #475569;
+  line-height: 1.5;
+}
+.confirmationActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.confirmationActions button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+}
+.confirmationCancel {
+  background: #e2e8f0;
+  color: #334155;
+}
+.confirmationConfirm {
+  background: #2563eb;
+  color: #fff;
+}

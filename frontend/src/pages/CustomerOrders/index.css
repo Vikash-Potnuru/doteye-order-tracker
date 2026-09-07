@@ -1,0 +1,23 @@
+.orderFilters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.orderFilters select {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  color: #334155;
+}
+.orderGridPage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+@media (max-width: 750px) {
+  .orderGridPage {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,21 @@
+.mainArea {
+  margin-left: 245px;
+  width: calc(100% - 245px);
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+.pageContent {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 36px 40px 48px;
+}
+@media (max-width: 900px) {
+  .mainArea {
+    margin-left: 0;
+    width: 100%;
+  }
+  .pageContent {
+    padding: 28px 20px 36px;
+  }
+}

@@ -1,0 +1,39 @@
+.disputeFilters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.disputeFilters select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+}
+.adminDisputeTable {
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+.adminDisputeTable table {
+  width: 100%;
+  min-width: 950px;
+  border-collapse: collapse;
+}
+.adminDisputeTable th,
+.adminDisputeTable td {
+  padding: 13px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  font-size: 13px;
+}
+.adminDisputeTable th {
+  background: #f8fafc;
+  color: #475569;
+}
+.adminDisputeTable a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 700;
+}

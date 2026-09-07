@@ -1,0 +1,47 @@
+.adminBackLink {
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #334155;
+  text-decoration: none;
+  font-size: 13px;
+}
+.adminOrderSummary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.adminOrderSummary > div,
+.adminOrderCard {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+}
+.adminOrderSummary span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.adminOrderSummary strong {
+  color: #0f172a;
+}
+.adminOrderCard {
+  margin-bottom: 15px;
+}
+.adminOrderCard h2 {
+  margin: 0 0 18px;
+  font-size: 17px;
+}
+@media (max-width: 800px) {
+  .adminOrderSummary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .adminOrderSummary {
+    grid-template-columns: 1fr;
+  }
+}

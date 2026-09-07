@@ -1,0 +1,70 @@
+.adminStats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.adminDashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+.adminPanel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+}
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.panelHeader h2 {
+  margin: 0;
+  font-size: 16px;
+}
+.panelHeader a {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+}
+.adminListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.adminListItem:last-child {
+  border-bottom: 0;
+}
+.adminListItem strong {
+  font-size: 13px;
+}
+.adminListItem p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 12px;
+}
+.messageTime {
+  font-size: 11px;
+  color: #64748b;
+}
+@media (max-width: 1200px) {
+  .adminStats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 750px) {
+  .adminDashboardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .adminStats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

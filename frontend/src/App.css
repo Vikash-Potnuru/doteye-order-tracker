@@ -1,0 +1,545 @@
+.simpleNotFound {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: #f8fafc;
+}
+.simpleNotFound h1 {color: #0f172a;}
+.simpleNotFound p {color: #64748b;}
+.globalToast {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 100;
+  background: #0f172a;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 9px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, .2);
+  font-size: 13px;
+}
+
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pageContent {
+  animation: pageFadeIn 0.35s ease;
+}
+
+.pageContent > * {
+  animation: riseIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.pageContent > *:nth-child(2) {
+  animation-delay: 70ms;
+}
+
+.pageContent > *:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.statsGrid > *,
+.orderGrid > *,
+.orderGridPage > * {
+  animation: riseIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.statsGrid > *:nth-child(2),
+.orderGrid > *:nth-child(2),
+.orderGridPage > *:nth-child(2) {
+  animation-delay: 60ms;
+}
+
+.statsGrid > *:nth-child(3),
+.orderGrid > *:nth-child(3),
+.orderGridPage > *:nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.statsGrid > *:nth-child(4),
+.orderGrid > *:nth-child(4),
+.orderGridPage > *:nth-child(4) {
+  animation-delay: 180ms;
+}
+
+.statsGrid > *:nth-child(5),
+.orderGrid > *:nth-child(5),
+.orderGridPage > *:nth-child(5) {
+  animation-delay: 240ms;
+}
+
+.globalToast {
+  animation: toastSlideIn 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:root[data-theme='dark'] {
+  body {
+    background: #0b1424;
+  }
+
+  .mainArea,
+  .chatMessages,
+  .simpleNotFound,
+  .loginPage {
+    background: #0b1424;
+  }
+
+  .navbar,
+  .orderCard,
+  .statsCard,
+  .detailsCard,
+  .orderItem,
+  .timelineIcon,
+  .adminPanel,
+  .adminOrderSummary,
+  .adminOrderSummary > div,
+  .adminOrderCard,
+  .detailPanel,
+  .disputeTableWrapper,
+  .notEligible,
+  .notFoundPage,
+  .chatWindow,
+  .disputeForm,
+  .resolutionPanel,
+  .adminDisputeTable,
+  .orderTableWrapper,
+  .disputeTableWrapper,
+  .orderDetailsPanel,
+  .orderItemsPanel,
+  .loginBox,
+  .chatOrderItem,
+  .activityList,
+  .searchBar,
+  .emptyState,
+  .errorMessage,
+  .systemMessage {
+    background: #142238;
+    border-color: #2b405c;
+  }
+
+  .navbar,
+  .chatHeader,
+  .chatDemo,
+  .chatInput,
+  .adminListItem,
+  .adminDisputeTable td,
+  .orderTableWrapper td,
+  .disputeTableWrapper td,
+  .adminDisputeTable th,
+  .orderTableWrapper th,
+  .activityItem {
+    border-color: #2b405c;
+  }
+
+  .pageHeader h1,
+  .orderId,
+  .orderCardInfo h3,
+  .detailsCard,
+  .detailsCard h2,
+  .orderItem h3,
+  .orderItem > p,
+  .adminOrderSummary,
+  .adminOrderCard,
+  .detailPanel,
+  .detailPanel h2,
+  .detailPanel h3,
+  .notEligible h2,
+  .notFoundPage h1,
+  .notFoundPage h2,
+  .statsCard h2,
+  .navbarUser strong,
+  .loginBox h1,
+  .loginBox button strong,
+  .orderItemName,
+  .timelineContent strong,
+  .resolutionPanel h2,
+  .customerExplanation,
+  .simpleNotFound h1,
+  .adminPanel,
+  .adminListItem,
+  .adminDisputeTable td,
+  .orderTableWrapper td,
+  .disputeTable td,
+  .orderDetailsPanel,
+  .orderItemsPanel {
+    color: #f4f8fc;
+  }
+
+  .pageHeader p,
+  .orderDate,
+  .orderCardInfo p,
+  .navbarUser small,
+  .loginBox > p,
+  .loginBox button small,
+  .activityItem p,
+  .activityItem span,
+  .noMessages,
+  .orderItemMeta,
+  .timelineContent p,
+  .timelineContent small,
+  .simpleNotFound p,
+  .formGroup label,
+  .labelRow span,
+  .chatOrderItem p,
+  .emptyState p,
+  .adminListItem p,
+  .messageTime,
+  .adminDisputeTable td,
+  .orderTableWrapper td,
+  .disputeTable td,
+  .orderDetailsPanel span,
+  .orderItemsPanel p {
+    color: #9db0c9;
+  }
+
+  .adminOrderSummary span,
+  .adminOrderSummary strong,
+  .adminOrderCard,
+  .detailRows span,
+  .detailRows strong,
+  .description,
+  .resolutionNotes,
+  .disputeTableWrapper td,
+  .notEligible p,
+  .notFoundPage p {
+    color: #d9e6f4;
+  }
+
+  .adminOrderSummary span,
+  .detailRows span,
+  .disputeTableWrapper td,
+  .notEligible p,
+  .notFoundPage p {
+    color: #9db0c9;
+  }
+
+  .customerExplanation {
+    background: #1b304b;
+    color: #d9e6f4;
+  }
+
+  .backButton {
+    background: #1b304b;
+    border-color: #3a5371;
+    color: #e6eef8;
+  }
+
+  .resolutionPanel textarea {
+    background: #182b45;
+    border-color: #3a5371;
+    color: #e6eef8;
+  }
+
+  .resolutionPanel > p,
+  .detailRows p {
+    border-bottom-color: #2b405c;
+  }
+
+  .orderLink {
+    background: #2a3b54;
+    color: #d9e6f4;
+  }
+
+  .lockNote {
+    background: #49351d;
+    color: #f4c77c;
+  }
+
+  .messageBubble,
+  .chatBackLink,
+  .emptyState h2,
+  .emptyState p,
+  .loaderBox p,
+  .systemMessage,
+  .chatMessage:not(.myMessage) .messageBubble {
+    color: #d9e6f4;
+  }
+
+  .messageBubble,
+  .systemMessage {
+    background: #1b304b;
+  }
+
+  .myMessage .messageBubble {
+    background: #267bb8;
+    color: #f4f8fc;
+  }
+
+  .chatBackLink {
+    border-color: #3a5371;
+  }
+
+  .emptyState {
+    border-color: #3a5371;
+  }
+
+  .errorMessage {
+    background: #3a1f32;
+    color: #f38ba7;
+  }
+
+  .loader {
+    border-color: #274466;
+    border-top-color: #70b9e8;
+  }
+
+  .summaryGrid strong,
+  .timelineTop h3,
+  .timelineContent strong {
+    color: #f4f8fc;
+  }
+
+  .summaryGrid span,
+  .timelineTop span,
+  .timelineContent p,
+  .timelineContent small,
+  .orderItem p,
+  .searchBar svg {
+    color: #9db0c9;
+  }
+
+  .sectionHeader h2,
+  .statsCardTop,
+  .sectionHeader a,
+  .chatDemo button,
+  .panelHeader a,
+  .adminDisputeTable a,
+  .orderTableWrapper a,
+  .disputeTableWrapper a,
+  .notEligible a,
+  .notFoundPage a,
+  .chatBackLink,
+  .adminBackLink,
+  .adminChatBack,
+  .tableActions a,
+  .tableActions button,
+  .orderTimeline .timelineDot,
+  .chatWindow .chatHeader p {
+    color: #70b9e8;
+  }
+
+  .orderCard,
+  .statsCard,
+  .chatOrderItem,
+  .activityList,
+  .resolutionPanel,
+  .adminDisputeTable,
+  .adminOrderTable,
+  .orderDetailsPanel,
+  .orderItemsPanel,
+  .adminOrderSummary,
+  .adminOrderCard,
+  .detailPanel,
+  .disputeTableWrapper {
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  }
+
+  .loginBox button,
+  .outlineButton,
+  .searchBar,
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea,
+  .chatInput input,
+  .searchBar input,
+  .adminFilters select,
+  .disputeFilters select,
+  .disputeTableWrapper,
+  .orderFilters select {
+    background: #182b45;
+    border-color: #3a5371;
+    color: #e6eef8;
+  }
+
+  .searchBar input::placeholder,
+  .chatInput input::placeholder,
+  .formGroup input::placeholder,
+  .formGroup textarea::placeholder {
+    color: #7f94af;
+  }
+
+  .detailsCard,
+  .orderItem {
+    background: #142238;
+    border-color: #2b405c;
+  }
+
+  .timelineIcon {
+    background: #142238;
+    color: #70b9e8;
+  }
+
+  .timelineItem:not(:last-child)::after {
+    background: #28557d;
+  }
+
+  .loginBox button:hover,
+  .outlineButton:hover {
+    background: #203a5b;
+    border-color: #70b9e8;
+  }
+
+  .orderCard,
+  .statsCard,
+  .chatOrderItem,
+  .outlineButton,
+  .chatOrderLink,
+  .sidebar nav a {
+    transition-property: transform, background-color, border-color, box-shadow, color;
+  }
+
+  .orderCard:hover,
+  .statsCard:hover {
+    transform: translateY(-4px);
+    border-color: #70b9e8;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.24);
+  }
+
+  .chatOrderItem:hover {
+    transform: translateX(5px) translateY(-2px);
+    border-color: #70b9e8;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+  }
+
+  .outlineButton:hover,
+  .chatOrderLink:hover {
+    transform: translateY(-2px);
+    border-color: #70b9e8;
+    box-shadow: 0 6px 14px rgba(112, 185, 232, 0.2);
+  }
+
+  .sidebar nav a:hover {
+    transform: translateX(3px);
+  }
+
+  .chatMessage:not(.mine) {
+    background: #1b304b;
+    color: #e6eef8;
+  }
+
+  .errorMessage,
+  .dangerBox,
+  .status-disputed,
+  .status-resolved-rejected {
+    background: #3a1f32;
+    color: #f38ba7;
+  }
+
+  .status-placed,
+  .status-shipped,
+  .status-under-review {
+    background: #193b5c;
+    color: #8dcefa;
+  }
+
+  .status-processing,
+  .status-open {
+    background: #49351d;
+    color: #f4c77c;
+  }
+
+  .status-delivered,
+  .status-resolved-refunded {
+    background: #143c38;
+    color: #78d8c4;
+  }
+
+  .status-cancelled {
+    background: #28364a;
+    color: #aebdd0;
+  }
+
+  .adminDisputeTable th,
+  .orderTableWrapper th,
+  .disputeTableWrapper th {
+    background: #1c2b42;
+    color: #b7cce3;
+  }
+
+  .adminListItem,
+  .adminDisputeTable td,
+  .orderTableWrapper td,
+  .disputeTableWrapper td {
+    border-bottom-color: #2b405c;
+  }
+
+  .adminOrderCard,
+  .detailPanel,
+  .disputeTableWrapper {
+    background: #142238;
+    border-color: #2b405c;
+  }
+
+  .primaryButton,
+  .chatInput button,
+  .chatOrderLink,
+  .resolutionButtons button {
+    background: #267bb8;
+  }
+
+  .secondaryButton {
+    background: #2a3b54;
+    color: #e6eef8;
+  }
+
+  .sidebar {
+    background: #08111f;
+  }
+
+  .themeButton {
+    background: #1c2b42;
+    border-color: #3a5371;
+    color: #f4c77c;
+  }
+
+  .sidebar nav a:hover,
+  .sidebar nav .activeNav {
+    background: #1a2c45;
+  }
+}

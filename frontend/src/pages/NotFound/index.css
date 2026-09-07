@@ -1,0 +1,26 @@
+.notFoundPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+.notFoundPage h1 {
+  margin: 0;
+  font-size: 72px;
+  color: #2563eb;
+}
+.notFoundPage h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+.notFoundPage p {
+  margin: 0 0 18px;
+  color: #64748b;
+}
+.notFoundPage a {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}

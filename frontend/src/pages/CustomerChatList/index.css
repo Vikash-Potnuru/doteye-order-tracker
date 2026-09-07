@@ -1,0 +1,57 @@
+.chatOrderList {
+  display: grid;
+  gap: 12px;
+}
+.chatOrderItem {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms ease, border-color 220ms ease;
+}
+.chatOrderItem:hover {
+  transform: translateX(5px) translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+}
+.chatOrderItem p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+.chatOrderLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 180ms ease, background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+.chatOrderLink:hover {
+  transform: translateX(3px);
+  background: #1d4ed8;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.24);
+}
+.chatOrderLink:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.3);
+  outline-offset: 3px;
+}
+@media (max-width: 650px) {
+  .chatOrderItem {
+    grid-template-columns: 1fr auto;
+  }
+  .chatOrderItem .chatOrderLink {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+}

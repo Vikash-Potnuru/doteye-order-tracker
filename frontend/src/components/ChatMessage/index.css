@@ -1,0 +1,48 @@
+.chatMessage {
+  display: flex;
+  margin-bottom: 10px;
+}
+.myMessage {
+  justify-content: flex-end;
+}
+.messageBubble {
+  max-width: 70%;
+  padding: 10px 13px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+.myMessage .messageBubble {
+  background: #2563eb;
+  color: #ffffff;
+}
+.messageBubble small {
+  font-weight: 700;
+  opacity: 0.85;
+}
+.messageBubble p {
+  margin: 5px 0;
+  line-height: 1.45;
+}
+.messageBubble span {
+  font-size: 10px;
+  opacity: 0.75;
+}
+.systemMessage {
+  margin: 12px auto;
+  max-width: 80%;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.systemMessage p {
+  margin: 0 0 4px;
+}
+
+.systemMessage span {
+  font-size: 10px;
+}

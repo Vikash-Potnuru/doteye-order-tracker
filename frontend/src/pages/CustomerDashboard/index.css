@@ -1,0 +1,70 @@
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+.dashboardSection {
+  margin-top: 36px;
+}
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.sectionHeader h2 {
+  margin: 0;
+  font-size: 18px;
+}
+.sectionHeader a {
+  color: #1769aa;
+  text-decoration: none;
+  font-size: 13px;
+}
+.orderGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.activityList {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+.activityItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.activityItem:last-child {
+  border-bottom: 0;
+}
+.activityItem p {
+  margin: 4px 0 0;
+  color: #52627a;
+  font-size: 12px;
+}
+.activityItem span {
+  color: #73839b;
+  font-size: 11px;
+}
+@media (max-width: 1150px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 750px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .orderGrid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

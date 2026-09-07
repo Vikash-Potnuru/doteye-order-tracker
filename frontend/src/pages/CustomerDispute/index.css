@@ -1,0 +1,16 @@
+.notEligible {
+  padding: 45px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  text-align: center;
+}
+.notEligible h2 {
+  margin: 0 0 8px;
+}
+.notEligible p {
+  color: #64748b;
+}
+.notEligible a {
+  color: #2563eb;
+}
