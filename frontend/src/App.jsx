@@ -153,7 +153,7 @@ const App = () => {
       <ProtectedRoute exact path="/admin/disputes" allowedRole="admin" component={AdminDisputes} currentUser={currentUser} logout={logout} {...commonProps} />
       <ProtectedRoute exact path="/admin/disputes/:disputeId" allowedRole="admin" component={AdminDisputeDetails} currentUser={currentUser} logout={logout} {...commonProps} />
       <Route path="/not-found" component={NotFound} />
-      <Redirect to={currentUser ? '/' : '/login'} />
+      <Redirect to="/not-found" />
     </Switch>
     {notification && <div className="globalToast">{notification}</div>}
   </>
